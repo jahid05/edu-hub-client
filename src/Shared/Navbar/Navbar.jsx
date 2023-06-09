@@ -11,10 +11,10 @@ const Navbar = () => {
         <Link className="text-theme-200">Course</Link>
       </li>
       <li className="text-lg font-semibold">
-        <Link className="text-theme-200">Blog</Link>
+        <Link className="text-theme-200">Instructors</Link>
       </li>
       <li className="text-lg font-semibold">
-        <Link className="text-theme-200">About</Link>
+        <Link className="text-theme-200">Blogs</Link>
       </li>
       <li className="text-lg font-semibold">
         <Link className="text-theme-200">Contact</Link>

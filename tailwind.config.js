@@ -14,7 +14,7 @@ export default {
       },
       fontFamily: {
         'custom-100': ['Inter', 'sans-serif'],
-        'custom-200': ['Staatliches', 'cursive'],
+        'custom-200': ['Bebas Neue', 'cursive'],
       },
     },
   },
