@@ -6,7 +6,7 @@ const SignIn = () => {
   return (
     <div className="container mx-auto">
       <div className="hero min-h-screen bg-base-200">
-        <div className="card w-full max-w-md shadow-2xl bg-base-100">
+        <div className="card w-full max-w-lg shadow-2xl bg-base-100">
           <h2 className="bg-theme-100 text-white rounded-t-xl w-full p-4 text-2xl font-bold text-center">
             Sign in
           </h2>
@@ -16,6 +16,8 @@ const SignIn = () => {
                 <span className="label-text">Email</span>
               </label>
               <input
+                required
+                name="email"
                 type="text"
                 placeholder="email"
                 className="input input-bordered rounded-xl"
@@ -26,6 +28,8 @@ const SignIn = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
+                required
+                name="password"
                 type="text"
                 placeholder="password"
                 className="input input-bordered rounded-xl"
@@ -43,13 +47,13 @@ const SignIn = () => {
             </Link>
             <div className="form-control mt-6">
               <Link className="rounded-xl text-lg btn bg-theme-100 text-white hover:bg-theme-200 duration-300 normal-case">
-                Login
+                Sign in
               </Link>
             </div>
-            <div className="flex py-2">
+            <div className="text-center py-2">
               <p className="label-text">
                 Don’t have an account?
-                <Link className="btn-link mx-2">Sign up</Link>
+                <Link to="/signUp" className="btn-link mx-2">Sign up</Link>
               </p>
             </div>
           </div>
