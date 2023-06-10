@@ -1,24 +1,33 @@
 import { Link } from "react-router-dom";
 import google from "../../assets/Images/google.png";
+import { useForm } from "react-hook-form";
 
 import { FaEyeSlash, FaEye } from "react-icons/fa";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [password, setPassword] = useState("");
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+  
 
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
+
+  const {register, handleSubmit,watch, formState: { errors },} = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+  const password = useRef({});
+  password.current = watch('password', '');
+
+
   return (
-    <div className="container mx-auto">
-      <div className="hero min-h-screen bg-base-200">
-        <div className="card w-full max-w-xl shadow-2xl bg-base-100">
+    <div className="container mx-auto py-12 px-4 md:px-0">
+      <div className="hero bg-base-200">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="card w-full max-w-xl shadow-2xl bg-base-100"
+        >
           <h2 className="bg-theme-100 text-white rounded-t-xl w-full p-4 text-2xl font-bold text-center">
             Sign up
           </h2>
@@ -28,12 +37,15 @@ const SignUp = () => {
                 <span className="label-text">Name</span>
               </label>
               <input
-                required
+                {...register("name", {required: true, maxLength: 30, minLength: 6})}
                 name="name"
                 type="text"
                 placeholder="name"
                 className="input input-bordered rounded-xl"
               />
+              {errors.name?.type === "required" && <span className="text-red-600 label-text m-1">Name is required</span>}            
+              {errors.name?.type === "maxLength" && <span className="text-red-600 label-text m-1">Maximum 20 character</span>}
+              {errors.name?.type === "minLength" && <span className="text-red-600 label-text m-1">Minimum 6 character</span>}
             </div>
             <div className="grid grid-cols-2 gap-2">
               <div className="form-control">
@@ -41,24 +53,28 @@ const SignUp = () => {
                   <span className="label-text">Email</span>
                 </label>
                 <input
-                  required
+                  {...register("email", {required: true, maxLength: 30, minLength: 6})}
                   name="email"
                   type="text"
                   placeholder="email"
                   className="input input-bordered rounded-xl"
                 />
+                {errors.email?.type === "required" && <span className="text-red-600 label-text m-1">Email is required</span>}            
+                {errors.email?.type === "maxLength" && <span className="text-red-600 label-text m-1">Maximum 20 character</span>}
+                {errors.email?.type === "minLength" && <span className="text-red-600 label-text m-1">Minimum 6 character</span>}
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Photo</span>
                 </label>
                 <input
-                  required
+                  {...register("photoURL", {required: true})}
                   name="photoURL"
                   type="url"
                   placeholder="photo"
                   className="input input-bordered rounded-xl"
-                />
+                />              
+                {errors.photoURL?.type === "required" && <span className="text-red-600 label-text m-1">Photo is required</span>}  
               </div>
             </div>
             <div className="grid grid-cols-2 gap-2">
@@ -67,33 +83,43 @@ const SignUp = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  required
+                  {...register("password", {required: 'Confirm Password is required', maxLength: 30, minLength: 8, pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).*$/})}
                   name="password"
                   type="password"
                   placeholder="password"
                   className="input input-bordered rounded-xl"
                 />
+                {errors.password?.type === "required" && <span className="text-red-600 label-text m-1">Password is required</span>}            
+                {errors.password?.type === "maxLength" && <span className="text-red-600 label-text m-1">Maximum 20 character</span>}
+                {errors.password?.type === "minLength" && <span className="text-red-600 label-text m-1">Minimum 8 characters</span>}
+                {errors.password?.type === "pattern" && <span className="text-red-600 label-text m-1">Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character</span>}
               </div>
               <div className="form-control relative">
                 <label className="label">
                   <span className="label-text">Confirm Password</span>
                 </label>
                 <input
-                  required
+                  {...register("confirmPassword", {required: 'Confirm Password is required',
+                  validate: (value) =>
+                    value === password.current || 'Passwords do not match', maxLength: 30, minLength: 8, pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).*$/})}
                   name="confirmPassword"
                   type={showPassword ? "text" : "password"}
-                id="password"
-                onChange={handlePasswordChange}
+                  id="password"
                   placeholder="confirm password"
                   className="input input-bordered rounded-xl"
                 />
-                <div className="absolute right-6 bottom-1">
-                  <button
-                    className="text-2xl text-slate-700"
+                {errors.confirmPassword?.type === "required" && <span className="text-red-600 label-text m-1">Confirm password is required</span>}            
+                {errors.confirmPassword && <p className="text-red-600 label-text mt-1">{errors.confirmPassword.message}</p>}           
+                {errors.confirmPassword?.type === "maxLength" && <span className="text-red-600 label-text m-1">Maximum 20 character</span>}
+                {errors.confirmPassword?.type === "minLength" && <span className="text-red-600 label-text m-1">Minimum 8 characters</span>}
+                {errors.confirmPassword?.type === "pattern" && <span className="text-red-600 label-text m-1">Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character</span>}
+                <div className="absolute right-6 bottom-3">
+                  <p
+                    className="md:text-xl text-lg text-slate-700 cursor-pointer"
                     onClick={handleTogglePassword}
                   >
                     {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
-                  </button>
+                  </p>
                 </div>
               </div>
             </div>
@@ -103,9 +129,9 @@ const SignUp = () => {
               Sign in with google
             </Link>
             <div className="form-control mt-6">
-              <Link className="rounded-xl text-lg btn bg-theme-100 text-white hover:bg-theme-200 duration-300 normal-case">
+              <button className="rounded-xl text-lg btn bg-theme-100 text-white hover:bg-theme-200 duration-300 normal-case">
                 Sign up
-              </Link>
+              </button>
             </div>
             <div className="text-center py-2">
               <p className="label-text">
@@ -116,7 +142,7 @@ const SignUp = () => {
               </p>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

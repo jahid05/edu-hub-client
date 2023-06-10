@@ -45,11 +45,11 @@ const Slider = () => {
   );
   return (
     <>
-      <div ref={sliderRef} className="keen-slider">
+      <div ref={sliderRef} className="keen-slider px-4 md:px-2">
         <div className="keen-slider__slide number-slide1">
           <div className="min-h-[900px] container mx-auto grid md:grid-cols-2 grid-cols-1 gap-12">
             <div className="h-full flex-col flex justify-center space-y-12">
-              <h1 className="text-7xl font-bold capitalize">
+              <h1 className="lg:text-7xl md:text-5xl text-3xl font-bold capitalize">
                 up your skills to advance your career path
               </h1>
               <p className="text-lg text-slate-500">
@@ -78,8 +78,8 @@ const Slider = () => {
         </div>
         <div className="keen-slider__slide number-slide2">
           <div className="min-h-[900px] container mx-auto grid md:grid-cols-2 grid-cols-1 gap-12">
-            <div className="h-full flex-col flex justify-center space-y-12">
-              <h1 className="text-6xl font-bold capitalize">
+            <div className="h-full flex-col flex justify-center space-y-12 md:px-4 px-2">
+              <h1 className="lg:text-6xl md:text-5xl text-3xl font-bold capitalize">
                 Your most trusted guide for English Language proficiency
               </h1>
               <p className="text-lg text-slate-500">
@@ -109,7 +109,7 @@ const Slider = () => {
         {/* <div className="keen-slider__slide number-slide3">
           <div className="min-h-[900px] container mx-auto grid md:grid-cols-2 grid-cols-1 gap-12">
             <div className="h-full flex-col flex justify-center space-y-12">
-              <h1 className="text-7xl font-bold capitalize">
+              <h1 className="lg:text-7xl md:text-5xl text-3xl font-bold capitalize">
                 up your skills to advance your career path
               </h1>
               <p className="text-lg text-slate-500">
