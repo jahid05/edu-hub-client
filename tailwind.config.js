@@ -8,9 +8,9 @@ export default {
     extend: {
       colors: {
         transparent: "transparent",
-        "theme-100": "#00917C",
+        "theme-100": "#1B9C85",
         "theme-200": "#101828",
-        "theme-300": "#CAD5E2",
+        "theme-300": "#dcdde1",
       },
       fontFamily: {
         'custom-100': ['Inter', 'sans-serif'],

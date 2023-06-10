@@ -1,11 +1,13 @@
-import Courses from "./Courses/Courses";
+import PopularInstructors from "../Intructors/PopularInstructors";
+import PopularCourses from "./Courses/PopularCourses";
 import Slider from "./Slider/Slider";
 
 const Home = () => {
     return (
-        <div className="px-4 md:px-2">
+        <div className="">
             <Slider></Slider>
-            <Courses></Courses>
+            <PopularCourses></PopularCourses>
+            <PopularInstructors></PopularInstructors>
         </div>
     );
 };

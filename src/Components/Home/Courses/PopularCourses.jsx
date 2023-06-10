@@ -13,10 +13,11 @@ import SectionTitle from "../../../Shared/SectionTitle/SectionTitle";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Courses = () => {
+const PopularCourses = () => {
   const available = 10;
   return (
-    <div className="container mx-auto md:py-20 py-12">
+    <div className="bg-theme-300">
+      <div className="container mx-auto pb-24">
       <SectionTitle
         subTitle="Explore Programs"
         title="Our Most Popular Courses"
@@ -88,7 +89,7 @@ const Courses = () => {
                   </div>
                 </div>
                 <div className="card-actions justify-end">
-                  <Link className="btn text-2xl text-white bg-theme-100">
+                  <Link className="rounded-lg text-2xl btn bg-theme-100 text-white hover:bg-theme-200 duration-300">
                     <FaArrowRight></FaArrowRight>
                   </Link>
                 </div>
@@ -338,7 +339,8 @@ const Courses = () => {
         </Swiper>
       </>
     </div>
+    </div>
   );
 };
 
-export default Courses;
+export default PopularCourses;
