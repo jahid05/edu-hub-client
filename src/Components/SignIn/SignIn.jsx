@@ -1,8 +1,19 @@
 import { Link } from "react-router-dom";
-
 import google from "../../assets/Images/google.png";
+import { useState } from "react";
+import { FaEyeSlash, FaEye } from "react-icons/fa";
 
 const SignIn = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState("");
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <div className="container mx-auto">
       <div className="hero min-h-screen bg-base-200">
@@ -23,17 +34,24 @@ const SignIn = () => {
                 className="input input-bordered rounded-xl"
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
               <input
                 required
                 name="password"
-                type="text"
+                type={showPassword ? "text" : "password"}
+                id="password"
+                onChange={handlePasswordChange}
                 placeholder="password"
                 className="input input-bordered rounded-xl"
               />
+              <div className="absolute right-6 bottom-9">
+                <button className="text-2xl text-slate-700" onClick={handleTogglePassword}>
+                  {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
+                </button>
+              </div>
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
@@ -53,7 +71,9 @@ const SignIn = () => {
             <div className="text-center py-2">
               <p className="label-text">
                 Don’t have an account?
-                <Link to="/signUp" className="btn-link mx-2">Sign up</Link>
+                <Link to="/signUp" className="btn-link mx-2">
+                  Sign up
+                </Link>
               </p>
             </div>
           </div>

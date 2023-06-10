@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
-
 import google from "../../assets/Images/google.png";
 
+import { FaEyeSlash, FaEye } from "react-icons/fa";
+import { useState } from "react";
+
 const SignUp = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState("");
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <div className="container mx-auto">
       <div className="hero min-h-screen bg-base-200">
@@ -11,18 +23,18 @@ const SignUp = () => {
             Sign up
           </h2>
           <div className="card-body rounded-b-xl">
-          <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-                <input
-                  required
-                  name="name"
-                  type="text"
-                  placeholder="name"
-                  className="input input-bordered rounded-xl"
-                />
-              </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                required
+                name="name"
+                type="text"
+                placeholder="name"
+                className="input input-bordered rounded-xl"
+              />
+            </div>
             <div className="grid grid-cols-2 gap-2">
               <div className="form-control">
                 <label className="label">
@@ -62,17 +74,27 @@ const SignUp = () => {
                   className="input input-bordered rounded-xl"
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control relative">
                 <label className="label">
                   <span className="label-text">Confirm Password</span>
                 </label>
                 <input
                   required
                   name="confirmPassword"
-                  type="password"
+                  type={showPassword ? "text" : "password"}
+                id="password"
+                onChange={handlePasswordChange}
                   placeholder="confirm password"
                   className="input input-bordered rounded-xl"
                 />
+                <div className="absolute right-6 bottom-1">
+                  <button
+                    className="text-2xl text-slate-700"
+                    onClick={handleTogglePassword}
+                  >
+                    {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
+                  </button>
+                </div>
               </div>
             </div>
             <div className="divider">OR</div>
