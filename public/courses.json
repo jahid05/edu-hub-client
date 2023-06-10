@@ -10,7 +10,7 @@
         "instructorDesignation": "Senior instructor",
         "availableSeats": 10,
         "price": 4500,
-        "image": "https://i.ibb.co/0YxL4Cd/Spanish-Intermediate-4.png"
+        "image": "https://www.jeduka.com/storage/newsletter/1599289297_STUDY_IN_UK.jpg"
     },
     {
         "_id": 2,
@@ -23,7 +23,7 @@
         "instructorDesignation": "Junior instructor",
         "availableSeats": 5,
         "price": 5500,
-        "image": "https://i.ibb.co/pJVmvTj/Spanish-Intermediate-3.png"
+        "image": "https://www.jeduka.com/storage/newsletter/1599288992_STUDY_IN_Spain.jpg"
     },
     {
         "_id": 3,
@@ -36,7 +36,7 @@
         "instructorDesignation": "Junior instructor",
         "availableSeats": 3,
         "price": 8000,
-        "image": "https://i.ibb.co/Y7W8qNr/Spanish-Intermediate-2.png"
+        "image": "https://www.jeduka.com/storage/newsletter/1599284491_STUDY_IN_France.jpg"
     },
     {
         "_id": 4,
@@ -49,7 +49,7 @@
         "instructorDesignation": "Senior instructor",
         "availableSeats": 8,
         "price": 6000,
-        "image": "https://i.ibb.co/k3hZr28/Spanish-Intermediate.png"
+        "image": "https://www.jeduka.com/storage/newsletter/1599284836_STUDY_IN_Germany.jpg"
     },
     {
         "_id": 5,
@@ -62,7 +62,7 @@
         "instructorDesignation": "Junior instructor",
         "availableSeats": 6,
         "price": 7500,
-        "image": "https://i.ibb.co/bNWPM1v/Italian.png"
+        "image": "https://www.jeduka.com/storage/newsletter/1599285420_STUDY_IN_Italy.jpg"
     },
     {
         "_id": 6,
@@ -75,6 +75,6 @@
         "instructorDesignation": "Senior instructor",
         "availableSeats": 0,
         "price": 5990,
-        "image": "https://i.ibb.co/xz5Y00w/Chinese.png"
+        "image": "https://www.jeduka.com/storage/newsletter/1610439110_Study%20in%20China.jpg"
     }
 ]

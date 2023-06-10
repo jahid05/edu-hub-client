@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link className="text-theme-200">Home</Link>
       </li>
       <li className="text-lg font-semibold">
-        <Link to='courses' className="text-theme-200">Course</Link>
+        <Link to='courses' className="text-theme-200">Courses</Link>
       </li>
       <li className="text-lg font-semibold">
         <Link className="text-theme-200">Instructors</Link>
@@ -57,10 +57,10 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{NavItems}</ul>
         </div>
         <div className="navbar-end gap-4">
-          <Link to="signIN" className="normal-case rounded-2xl md:text-md btn">
+          <Link to="signIn" className="normal-case md:text-md btn">
             Sign in
           </Link>
-          <Link to="signUp" className="normal-case rounded-2xl md:text-md btn bg-theme-100 text-white hover:bg-theme-200   px-8 duration-300">
+          <Link to="signUp" className="normal-case rounded-2xl md:text-md btn bg-theme-100 text-white hover:bg-theme-200   md:px-8 duration-300">
             Join Now
           </Link>
         </div>

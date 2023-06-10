@@ -1,5 +1,3 @@
-import instructor from "../../../assets/Images/bannerImg2.png";
-import coverImg from "../../../assets/Images/cover.png";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,10 +21,9 @@ const PopularCourses = () => {
         setCourses(data);
       });
   }, []);
-  console.log(courses);
   return (
     <div className="bg-theme-300">
-      <div className="container mx-auto pb-24">
+      <div className="container mx-auto lg:py-24 md:py-16 py-12 ">
         <SectionTitle
           subTitle="Explore Programs"
           title="Our Most Popular Courses"

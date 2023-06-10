@@ -11,7 +11,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const PopularInstructors = () => {
   return (
-    <div className="container mx-auto pb-24">
+    <div className="container mx-auto lg:py-24 md:py-16 py-12">
       <SectionTitle
         subTitle="Instructors"
         title="Our Most Popular Instructor"

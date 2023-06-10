@@ -6,27 +6,26 @@ import SignUp from "../Components/SignUp/SignUp";
 import Courses from "../Components/Home/Courses/Courses";
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children: [
-        {
-            path: "/",
-            element: <Home></Home>
-        },
-        {
-          path: "courses",
-          element: <Courses></Courses>,
-          loader: fetch
-        },
-        {
-          path: "signIn",
-          element: <SignIn></SignIn>
-        },
-        {
-          path: "signUp",
-          element: <SignUp></SignUp>
-        }
-      ]
-    },
-  ]);
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "courses",
+        element: <Courses></Courses>
+      },
+      {
+        path: "signIn",
+        element: <SignIn></SignIn>,
+      },
+      {
+        path: "signUp",
+        element: <SignUp></SignUp>,
+      },
+    ],
+  },
+]);
