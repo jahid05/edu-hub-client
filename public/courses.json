@@ -1,0 +1,80 @@
+[
+    {
+        "_id": 1,
+        "class": 24,
+        "duration": 2,
+        "description": "There is nothing much to say about the importance of learning how to speak English. It has become a very essential part of our practical and professional life. Speaking English gives you the edge to remain at the forefront of competition and is regarded as equal, if not more important than academic qualifications. Business, Job, Studying Abroad, even studying in good institutions in the country require needed skills in Spoken English. Listening to English songs, watching English movies and news, reading English newspapers are very important in the process of developing speaking skills. Most importantly, you need an environment where you could exercise the above-mentioned things with the help of an experienced and friendly instructor. We have combined Speaking, Listening, Reading, Movie show, Vocabulary in a very effective manner which will definitely help you master the skills of speaking this international language better.",
+        "courseName": "English Beginners",
+        "instructorImage": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=2000",
+        "instructorName": "John Smith",
+        "instructorDesignation": "Senior instructor",
+        "availableSeats": 10,
+        "price": 4500,
+        "image": "https://i.ibb.co/0YxL4Cd/Spanish-Intermediate-4.png"
+    },
+    {
+        "_id": 2,
+        "class": 24,
+        "duration": 2,
+        "description": "There is nothing much to say about the importance of learning how to speak English. It has become a very essential part of our practical and professional life. Speaking English gives you the edge to remain at the forefront of competition and is regarded as equal, if not more important than academic qualifications. Business, Job, Studying Abroad, even studying in good institutions in the country require needed skills in Spoken English. Listening to English songs, watching English movies and news, reading English newspapers are very important in the process of developing speaking skills. Most importantly, you need an environment where you could exercise the above-mentioned things with the help of an experienced and friendly instructor. We have combined Speaking, Listening, Reading, Movie show, Vocabulary in a very effective manner which will definitely help you master the skills of speaking this international language better.",
+        "courseName": "Spanish Intermediate",
+        "instructorImage": "https://st2.depositphotos.com/3776273/42867/i/600/depositphotos_428675066-stock-photo-image-of-confident-handsome-man.jpg",
+        "instructorName": "Maria Rodriguez",
+        "instructorDesignation": "Junior instructor",
+        "availableSeats": 5,
+        "price": 5500,
+        "image": "https://i.ibb.co/pJVmvTj/Spanish-Intermediate-3.png"
+    },
+    {
+        "_id": 3,
+        "class": 24,
+        "duration": 2,
+        "description": "There is nothing much to say about the importance of learning how to speak English. It has become a very essential part of our practical and professional life. Speaking English gives you the edge to remain at the forefront of competition and is regarded as equal, if not more important than academic qualifications. Business, Job, Studying Abroad, even studying in good institutions in the country require needed skills in Spoken English. Listening to English songs, watching English movies and news, reading English newspapers are very important in the process of developing speaking skills. Most importantly, you need an environment where you could exercise the above-mentioned things with the help of an experienced and friendly instructor. We have combined Speaking, Listening, Reading, Movie show, Vocabulary in a very effective manner which will definitely help you master the skills of speaking this international language better.",
+        "courseName": "French Advanced",
+        "instructorImage": "https://img.freepik.com/free-photo/photo-hesitant-unshaven-male-clasps-hands-with-hesitation-has-clueless-expression-doubts-what-dressed-checkered-shirt-stands-against-white-wall-people-confusement-concept_273609-15067.jpg",
+        "instructorName": "Jean Dupont",
+        "instructorDesignation": "Junior instructor",
+        "availableSeats": 3,
+        "price": 8000,
+        "image": "https://i.ibb.co/Y7W8qNr/Spanish-Intermediate-2.png"
+    },
+    {
+        "_id": 4,
+        "class": 24,
+        "duration": 2,
+        "description": "There is nothing much to say about the importance of learning how to speak English. It has become a very essential part of our practical and professional life. Speaking English gives you the edge to remain at the forefront of competition and is regarded as equal, if not more important than academic qualifications. Business, Job, Studying Abroad, even studying in good institutions in the country require needed skills in Spoken English. Listening to English songs, watching English movies and news, reading English newspapers are very important in the process of developing speaking skills. Most importantly, you need an environment where you could exercise the above-mentioned things with the help of an experienced and friendly instructor. We have combined Speaking, Listening, Reading, Movie show, Vocabulary in a very effective manner which will definitely help you master the skills of speaking this international language better.",
+        "courseName": "German Beginners",
+        "instructorImage": "https://img.freepik.com/free-photo/cheerful-dark-skinned-woman-smiling-broadly-rejoicing-her-victory-competition-among-young-writers-standing-isolated-against-grey-wall-people-success-youth-happiness-concept_273609-1246.jpg",
+        "instructorName": "Anna Schmidt",
+        "instructorDesignation": "Senior instructor",
+        "availableSeats": 8,
+        "price": 6000,
+        "image": "https://i.ibb.co/k3hZr28/Spanish-Intermediate.png"
+    },
+    {
+        "_id": 5,
+        "class": 24,
+        "duration": 2,
+        "description": "There is nothing much to say about the importance of learning how to speak English. It has become a very essential part of our practical and professional life. Speaking English gives you the edge to remain at the forefront of competition and is regarded as equal, if not more important than academic qualifications. Business, Job, Studying Abroad, even studying in good institutions in the country require needed skills in Spoken English. Listening to English songs, watching English movies and news, reading English newspapers are very important in the process of developing speaking skills. Most importantly, you need an environment where you could exercise the above-mentioned things with the help of an experienced and friendly instructor. We have combined Speaking, Listening, Reading, Movie show, Vocabulary in a very effective manner which will definitely help you master the skills of speaking this international language better.",
+        "courseName": "Italian Intermediate",
+        "instructorImage": "https://t4.ftcdn.net/jpg/02/24/86/95/360_F_224869519_aRaeLneqALfPNBzg0xxMZXghtvBXkfIA.jpg",
+        "instructorName": "Marco Rossi",
+        "instructorDesignation": "Junior instructor",
+        "availableSeats": 6,
+        "price": 7500,
+        "image": "https://i.ibb.co/bNWPM1v/Italian.png"
+    },
+    {
+        "_id": 6,
+        "class": 24,
+        "duration": 2,
+        "description": "There is nothing much to say about the importance of learning how to speak English. It has become a very essential part of our practical and professional life. Speaking English gives you the edge to remain at the forefront of competition and is regarded as equal, if not more important than academic qualifications. Business, Job, Studying Abroad, even studying in good institutions in the country require needed skills in Spoken English. Listening to English songs, watching English movies and news, reading English newspapers are very important in the process of developing speaking skills. Most importantly, you need an environment where you could exercise the above-mentioned things with the help of an experienced and friendly instructor. We have combined Speaking, Listening, Reading, Movie show, Vocabulary in a very effective manner which will definitely help you master the skills of speaking this international language better.",
+        "courseName": "Chinese Advanced",
+        "instructorImage": "https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg",
+        "instructorName": "Li Wei",
+        "instructorDesignation": "Senior instructor",
+        "availableSeats": 0,
+        "price": 5990,
+        "image": "https://i.ibb.co/xz5Y00w/Chinese.png"
+    }
+]
