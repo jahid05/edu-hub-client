@@ -57,10 +57,10 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{NavItems}</ul>
         </div>
         <div className="navbar-end gap-4">
-          <Link className="normal-case rounded-2xl md:text-md btn">
+          <Link to="signIN" className="normal-case rounded-2xl md:text-md btn">
             Sign in
           </Link>
-          <Link className="normal-case rounded-2xl md:text-md btn bg-theme-100 text-white hover:bg-theme-200   px-8 duration-300">
+          <Link to="signUp" className="normal-case rounded-2xl md:text-md btn bg-theme-100 text-white hover:bg-theme-200   px-8 duration-300">
             Join Now
           </Link>
         </div>
