@@ -1,4 +1,3 @@
-
 const SectionTitle = ({title, subTitle, description}) => {
     return (
         <div className="text-center pb-14">
