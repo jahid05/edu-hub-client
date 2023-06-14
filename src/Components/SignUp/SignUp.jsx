@@ -1,16 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import google from "../../assets/Images/google.png";
 import { useForm } from "react-hook-form";
 
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../context/Auth/AuthProvider";
-
-
+import { GoogleAuthProvider } from "firebase/auth";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  const googleProvider = new GoogleAuthProvider();
   const [showPassword, setShowPassword] = useState(false);
-const {createUser,updateUserProfile,setLoading} = useContext(AuthContext)
+  const { createUser, updateUserProfile, setLoading, googleLoginPopup } =
+    useContext(AuthContext);
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
@@ -18,12 +20,11 @@ const {createUser,updateUserProfile,setLoading} = useContext(AuthContext)
   const {
     register,
     handleSubmit,
-    watch,reset ,
+    watch,
+    reset,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-
-
     const name = data.name;
     const email = data.email;
     const password = data.password;
@@ -31,19 +32,18 @@ const {createUser,updateUserProfile,setLoading} = useContext(AuthContext)
     createUser(email, password)
       .then(() => {
         // Signed up
-        setLoading(true)
+        setLoading(true);
         const profile = { displayName: name, photoURL: photo };
         updateUserProfile(profile)
           .then(() => {
-            
-           window.alert("Signup Successfully")
-           reset();
+            window.alert("Signup Successfully");
+            navigate('/signIn')
+            reset();
           })
           .catch((err) => {
-            setLoading(false)
+            setLoading(false);
             console.log(err.message);
           });
-
         // ...
       })
       .catch((error) => {
@@ -52,13 +52,26 @@ const {createUser,updateUserProfile,setLoading} = useContext(AuthContext)
         console.log(errorCode, errorMessage);
       });
 
-    // if (!password === confirmPassword) {
-    //   return false;
-    // }
-
     const photo = data.photoURL;
 
-    console.log(name,password,email,photo);
+    console.log(name, password, email, photo);
+  };
+
+  // Sing Up with google
+
+  const handelLoginWithGoogle = () => {
+    googleLoginPopup(googleProvider)
+      .then((user) => {
+        // Signed in
+        console.log(user);
+        navigate('/')
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
   };
   const password = useRef({});
   password.current = watch("password", "");
@@ -252,7 +265,10 @@ const {createUser,updateUserProfile,setLoading} = useContext(AuthContext)
               </div>
             </div>
             <div className="divider">OR</div>
-            <Link className="btn normal-case rounded-xl btn-outline">
+            <Link
+              onClick={handelLoginWithGoogle}
+              className="btn normal-case rounded-xl btn-outline"
+            >
               <img className="w-5" src={google} alt="" />
               Sign in with google
             </Link>

@@ -5,13 +5,12 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/Auth/AuthProvider";
 
 const Navbar = () => {
-  const { user,logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
   const handleLogout = () => {
-    logOut()
-
+    logOut();
   };
-console.log(user);
+  console.log(user);
   const NavItems = (
     <>
       <li className="md:text-lg md:font-semibold">
@@ -25,8 +24,8 @@ console.log(user);
       <li className="md:text-lg md:font-semibold">
         <Link className="text-theme-200">Instructors</Link>
       </li>
-      <li className="md:text-lg md:font-semibold">
-        <Link className="text-theme-200">Blogs</Link>
+      <li  className="md:text-lg md:font-semibold">
+        <Link to="blog" className="text-theme-200">Blogs</Link>
       </li>
       <li className="md:text-lg md:font-semibold">
         <Link className="text-theme-200">Contact</Link>
@@ -110,23 +109,23 @@ console.log(user);
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="md:text-3xl text-2xl text-theme-100 border-2 border-theme-100 rounded-full">
-                 {
-                  user?.photoURL ?  <img src={user?.photoURL} alt="Image"/>
-                    : <FaUser></FaUser> 
-                 }  
-                 
+                  {user?.photoURL ? (
+                    <img src={user?.photoURL} alt="Image" />
+                  ) : (
+                    <FaUser></FaUser>
+                  )}
                 </div>
               </label>
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
               >
-                 <li>
+                <li>
                   <a className="justify-between">{user?.displayName}</a>
                 </li>
 
                 <li>
-                  <a className="justify-between">Dashboard</a>
+                  <Link to="/dashboard" className="justify-between">Dashboard</Link>
                 </li>
                 <li>
                   <a onClick={handleLogout}>Logout</a>

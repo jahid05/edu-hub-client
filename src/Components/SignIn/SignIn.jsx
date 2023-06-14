@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import google from "../../assets/Images/google.png";
 import { useState } from "react";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
@@ -6,8 +6,12 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../../context/Auth/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
+import Swal from 'sweetalert2';
+
+
+
 const SignIn = () => {
-  
+  const navigate = useNavigate();
   const googleProvider = new GoogleAuthProvider();
 
   const { signIn, googleLoginPopup } = useContext(AuthContext);
@@ -33,11 +37,18 @@ const SignIn = () => {
       .then((user) => {
         // Signed in
         console.log(user);
+        Swal.fire({
+          title: 'Sign in',
+          text: 'Sign in completed successfully.',
+          icon: 'success',
+        });
+        navigate('/')
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        
         console.log(errorCode, errorMessage);
       });
   };
@@ -48,7 +59,13 @@ const SignIn = () => {
     googleLoginPopup(googleProvider)
       .then((user) => {
         // Signed in
+        Swal.fire({
+          title: 'Sign in',
+          text: 'Sign in completed successfully.',
+          icon: 'success',
+        });
         console.log(user);
+        navigate('/')
         // ...
       })
       .catch((error) => {

@@ -9,6 +9,8 @@ import SignUp from "./Components/SignUp/SignUp";
 import Courses from "./Components/Home/Courses/Courses";
 import CourseDetails from "./Components/Home/Courses/CourseDetails";
 import AuthProvider from "./context/Auth/AuthProvider";
+import Dashboard from "./Components/Dashbord/Dashboard ";
+import Blog from "./Components/Blog/Blog";
 
 
 const router = createBrowserRouter([
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
         element: <Courses></Courses>,
       },
       {
+        path: 'blog',
+        element: <Blog></Blog>
+      },
+      {
         path: "courseDetails/:id",
         element: <CourseDetails></CourseDetails>,
         loader: ({ params }) =>
@@ -40,6 +46,11 @@ const router = createBrowserRouter([
             `https://edu-hub-server-sigma.vercel.app/courseDetails/${params.id}`
           ),
       },
+      {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>
+      }
+      
     ],
   },
 ]);

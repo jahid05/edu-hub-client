@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "totalClass": 10,
+      "experience": 3,
+      "image": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "totalClass": 8,
+      "experience": 2,
+      "image": "https://img.freepik.com/free-photo/man-wearing-t-shirt-gesturing_23-2149393645.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Michael Johnson",
+      "email": "michaeljohnson@example.com",
+      "totalClass": 5,
+      "experience": 1,
+      "image": "https://img.freepik.com/free-photo/expressive-bearded-man-wearing-shirt_273609-5928.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Emily Davis",
+      "email": "emilydavis@example.com",
+      "totalClass": 12,
+      "experience": 4,
+      "image": "https://img.freepik.com/premium-photo/onfident-handsome-man-with-arms-crossed-body-smiling-looking-determined_911620-3103.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Robert Wilson",
+      "email": "robertwilson@example.com",
+      "totalClass": 15,
+      "experience": 5,
+      "image": "https://st4.depositphotos.com/11585370/21426/i/600/depositphotos_214266104-stock-photo-smiling-handsome-man-blue-shirt.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Sophia Brown",
+      "email": "sophiabrown@example.com",
+      "totalClass": 7,
+      "experience": 2,
+      "image": "https://img.freepik.com/premium-photo/onfident-handsome-man-with-arms-crossed-body-smiling-looking-determined_911620-3092.jpg?w=2000"
+    },
+    {
+      "id": 7,
+      "name": "William Taylor",
+      "email": "williamtaylor@example.com",
+      "totalClass": 9,
+      "experience": 3,
+      "image": "https://img.freepik.com/free-photo/photo-hesitant-unshaven-male-clasps-hands-with-hesitation-has-clueless-expression-doubts-what-dressed-checkered-shirt-stands-against-white-wall-people-confusement-concept_273609-15067.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Olivia Anderson",
+      "email": "oliviaanderson@example.com",
+      "totalClass": 6,
+      "experience": 1,
+      "image": "https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+    },
+    {
+      "id": 9,
+      "name": "James Martinez",
+      "email": "jamesmartinez@example.com",
+      "totalClass": 11,
+      "experience": 4,
+      "image": "https://t3.ftcdn.net/jpg/02/07/55/70/360_F_207557081_uh1w4xm9CGqjFLJgrQKYPm9kiASOCPqx.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Ava Thomas",
+      "email": "avathomas@example.com",
+      "totalClass": 14,
+      "experience": 5,
+      "image": "https://t4.ftcdn.net/jpg/02/93/34/13/360_F_293341309_AjcDBJgKsoecAutNy5bKZDL9Sq2wpOFp.jpg"
+    }
+  ]
+  
